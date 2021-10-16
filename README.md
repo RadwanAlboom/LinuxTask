@@ -32,7 +32,6 @@ redhat
 passwd user3
 redhat
 
-su root
 visudo
 user3 ALL=(ALL) ALL
 :wq!
