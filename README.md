@@ -1,5 +1,3 @@
-# LinuxTask
-
 ## Q1:
 ```
 pvcreate /dev/sda7 /dev/sda8
