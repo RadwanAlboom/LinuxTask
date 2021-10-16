@@ -1,6 +1,6 @@
 # LinuxTask
 
-### Q1:
+# Q1:
 ```
 pvcreate /dev/sda7 /dev/sda8
 vgcreate -s 16M vg1 /dev/sda7 /dev/sda8
@@ -14,8 +14,8 @@ UUID=5ba707bd-a49e-4bc2-b4d4--57a55008d234 /mnt/data ext4 defaults 0 0
 mount -a
 df -h
 ```
-***
-### Q2:
+
+# Q2:
 ```
 useradd -u 601 -s /sbin/nologin user1
 passwd user1
@@ -37,14 +37,14 @@ visudo
 user3 ALL=(ALL) ALL
 :wq!
 ```
-***
+
 ### Q3:
 ```
 ssh-keygen -t rsa
 ssh-copy-id ralboom@192.168.43.122 
 ssh ralboom@192.168.43.122
 ```
-***
+
 ### Q4:
 ```
 cp /etc/fstab /var/tmp/
@@ -52,7 +52,7 @@ chgrp admin /var/tmp/fstab
 setfacl -m u:user1:rwx /var/tmp/fstab
 setfacl -m u:user2:--- /var/tmp/fstab
 ```
-***
+
 ### Q5:
 ```
 setenforce enforcing 
@@ -60,7 +60,7 @@ vi /etc/selinux/config
 SELINUX=enforcing
 :wq!
 ```
-***
+
 ### Q6:
 ```
 vi script2.sh
@@ -72,7 +72,7 @@ timeout -sHUP 10m ./script2.sh &
 ps -ef
 kill -15 3480
 ```
-***
+
 ### Q7:
 ```
 yum install tmux
@@ -83,7 +83,7 @@ yum install epel-release -y
 yum-config-manager --disable extras
 yum -y install zabbix zabbix-web php zabbix-server zabbix-agent
 ```
-***
+
 ### Q8:
 ```
 systemctl status firewalld
@@ -93,7 +93,7 @@ firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --add-rich-rule='rule family=ipv4 source address =192.168.0.109 service name=ssh reject'
 firewall-cmd --reload
  ```
-***
+
 ### Q9:
 ```
 vi script.sh
@@ -106,7 +106,7 @@ crontab -e
 :wq!
 crontab -l
 ```
-***
+
 ### Q10:
 ```
 yum -y install mariadb-server
