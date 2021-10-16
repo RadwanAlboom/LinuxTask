@@ -62,6 +62,7 @@ SELINUX=enforcing
 
 ***
 ### Q6:
+
 vi script2.sh
 #/bin/bash
 (while true; do echo -n "radwan " >> /home/ralboom/Desktop/out;sleep 1; done)
