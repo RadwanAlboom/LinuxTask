@@ -38,14 +38,14 @@ user3 ALL=(ALL) ALL
 :wq!
 ```
 
-### Q3:
+# Q3:
 ```
 ssh-keygen -t rsa
 ssh-copy-id ralboom@192.168.43.122 
 ssh ralboom@192.168.43.122
 ```
 
-### Q4:
+# Q4:
 ```
 cp /etc/fstab /var/tmp/
 chgrp admin /var/tmp/fstab
@@ -53,7 +53,7 @@ setfacl -m u:user1:rwx /var/tmp/fstab
 setfacl -m u:user2:--- /var/tmp/fstab
 ```
 
-### Q5:
+# Q5:
 ```
 setenforce enforcing 
 vi /etc/selinux/config
@@ -61,7 +61,7 @@ SELINUX=enforcing
 :wq!
 ```
 
-### Q6:
+# Q6:
 ```
 vi script2.sh
 #/bin/bash
@@ -73,7 +73,7 @@ ps -ef
 kill -15 3480
 ```
 
-### Q7:
+# Q7:
 ```
 yum install tmux
 yum install httpd
@@ -84,7 +84,7 @@ yum-config-manager --disable extras
 yum -y install zabbix zabbix-web php zabbix-server zabbix-agent
 ```
 
-### Q8:
+# Q8:
 ```
 systemctl status firewalld
 systemctl start  firewalld
@@ -94,7 +94,7 @@ firewall-cmd --add-rich-rule='rule family=ipv4 source address =192.168.0.109 ser
 firewall-cmd --reload
  ```
 
-### Q9:
+# Q9:
 ```
 vi script.sh
 #/bin/bash
@@ -107,7 +107,7 @@ crontab -e
 crontab -l
 ```
 
-### Q10:
+# Q10:
 ```
 yum -y install mariadb-server
 mysql_secure_installation
