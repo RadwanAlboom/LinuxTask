@@ -14,7 +14,7 @@ UUID=5ba707bd-a49e-4bc2-b4d4--57a55008d234 /mnt/data ext4 defaults 0 0
 :wq!
 mount -a
 df -h
-
+***
 ### Q2:
 
 useradd -u 601 -s /sbin/nologin user1
