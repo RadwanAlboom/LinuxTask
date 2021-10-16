@@ -2,7 +2,7 @@
 
 ### Q1:
 
-`pvcreate /dev/sda7 /dev/sda8`
+>pvcreate /dev/sda7 /dev/sda8
 
 vgcreate -s 16M vg1 /dev/sda7 /dev/sda8
 lvcreate -l 50 -n lvm02
