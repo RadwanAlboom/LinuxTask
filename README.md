@@ -4,8 +4,8 @@
 ```
 pvcreate /dev/sda7 /dev/sda8
 vgcreate -s 16M vg1 /dev/sda7 /dev/sda8
-lvcreate -l 50 -n lvm02
-mkfs.ext4 /dev/vg1/lvm02
+lvcreate -l 50 -n lv1
+mkfs.ext4 /dev/vg1/lv1
 mkdir -p /mnt/data
 blkid /dev/vg1/lv1
 vim /etc/fstab
