@@ -76,11 +76,28 @@ kill -15 3480
 ```
 yum install tmux
 yum install httpd
+systemctl start httpd
 yum install yum-utils createrepo -y
+mkdir -p /var/www/html/repos
 rpm -ivh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm
-yum install epel-release -y
-yum-config-manager --disable extras
+reposync -g -l -d -m --repoid=zabbix --newest-only --download-metadata --download_path=/var/www/html/repos
+createrepo /var/www/html
+yum-config-manager --disable extras,base,epel,updates,zabbix
+
+systemctl start firewalld
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --reload
+
+vi /etc/yum.repos.d/local.repo
+[localrepo]
+name=mylocalrepo
+baseurl=http://192.168.43.122
+enabled=1
+gpgcheck=0
+:wq!
+
 yum -y install zabbix zabbix-web php zabbix-server zabbix-agent
+
 ```
 
 ## Q8:
